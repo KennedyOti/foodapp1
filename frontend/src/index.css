@@ -1,0 +1,12 @@
+/* src/index.css */
+body {
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+h2 {
+  color: #333;
+}
