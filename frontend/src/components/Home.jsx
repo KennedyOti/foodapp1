@@ -27,7 +27,13 @@ const Home = () => {
         {products.map((product) => (
           <Col key={product._id} md={4} className="mb-4">
             <Card>
-              <Card.Img variant="top" src={product.imageUrl} />
+              {/* Dynamically setting the image src to ensure it loads properly */}
+              <Card.Img
+                variant="top"
+                src={product.imageUrl} // Directly use the image URL from the database
+                alt={product.name}
+                style={{ width: "100%", height: "auto" }} // Adjust the image style to fit
+              />
               <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
                 <Card.Text>{product.description}</Card.Text>
